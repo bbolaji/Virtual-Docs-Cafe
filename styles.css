@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #87CEEB; /* Cloud blue background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Make the navbar items wrap on smaller screens */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block; /* Make links block-level for better touch targets */
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h1 {
+    color: #333;
+}
+
+h2 {
+    color: #555;
+}
+
+/* About Us Section */
+#about {
+    text-align: center;
+}
+
+.responsive-image {
+    width: 100%;
+    max-width: 600px; /* Maximum width for larger screens */
+    height: auto;
+    border: 2px solid #87CEEB; /* Cloud blue border */
+    border-radius: 8px;
+}
+
+/* Contact Us Section */
+#contact-us {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color for contrast */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.gallery {
+    flex: 1;
+    padding: 20px;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between images */
+    justify-content: center; /* Center images horizontally */
+}
+
+.gallery-images img {
+    width: 100px; /* Smaller image width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images don't get distorted */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
+    transition: transform 0.3s ease-in-out; /* Optional: Smooth scaling effect */
+}
+
+.gallery-images img:hover {
+    transform: scale(1.1); /* Optional: Slightly enlarge image on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack the navbar items vertically on smaller screens */
+    }
+
+    nav ul li {
+        text-align: center; /* Center align navbar items */
+    }
+
+    section {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    #contact-us {
+        flex-direction: column;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .gallery-images {
+        flex-direction: column;
+    }
+
+    .gallery-images img {
+        width: 80px; /* Smaller image width on smaller screens */
+        max-width: 100%; /* Ensure the images do not exceed the container width */
+    }
+
+    .responsive-image {
+        max-width: 90%; /* Ensure the image fits within the container on smaller screens */
+        margin: 0 auto; /* Center the image */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        padding: 8px;
+    }
+
+    section {
+        margin: 2px;
+        padding: 5px;
+    }
+
+    footer {
+        padding: 5px;
+        font-size: 12px; /* Smaller text for footer */
+    }
+
+    .gallery-images img {
+        width: 60px; /* Further reduce image size for very small screens */
+        max-width: 100%; /* Ensure the images do not exceed the container width */
+    }
+
+    .responsive-image {
+        max-width: 100%; /* Ensure the image fits within the container on very small screens */
+        margin: 0 auto; /* Center the image */
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
