@@ -160,15 +160,17 @@ Here is the updated HTML document incorporating the new features for the Virtual
     <section id="contact-us">
         <h1>Contact Us</h1>
         <p>We'd love to hear from you! Reach out to us with any questions or to discuss your project needs.</p>
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message"></textarea><br>
-            <input type="submit" value="Submit">
-        </form>
+        <form action="send_email.php" method="POST" enctype="multipart/form-data">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea><br>
+                <label for="file">Attach a file:</label><br>
+                <input type="file" id="file" name="file"><br><br>
+                <input type="submit" value="Submit">
+            </form>
     </section>
 
     <section id="client-testimonials">
