@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Email details
-        $to = "your-email@example.com";  // Replace with your email address
+        $to = "virtualdocscafe@outlook.com";  // Replace with your email address
         $subject = "New Contact Form Submission from $name";
         $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
         $headers = "From: $email";
